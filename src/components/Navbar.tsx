@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
@@ -44,7 +43,6 @@ const Navbar = () => {
     { label: "Home", id: "hero" },
     { label: "About", id: "about" },
     { label: "Features", id: "features" },
-    { label: "Team", id: "team" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -65,7 +63,7 @@ const Navbar = () => {
         >
           <div className="flex items-center">
             <a href="#hero" className="mr-4">
-              <span className="font-bold text-2xl bg-gradient-to-r from-zeus-500 to-zeus-700 bg-clip-text text-transparent">
+              <span className="font-bold text-3xl md:text-4xl bg-gradient-to-r from-zeus-500 to-zeus-700 bg-clip-text text-transparent">
                 ZEUS
               </span>
             </a>
@@ -116,7 +114,7 @@ const Navbar = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-between items-center mb-8">
-            <span className="font-bold text-2xl bg-gradient-to-r from-zeus-500 to-zeus-700 bg-clip-text text-transparent">
+            <span className="font-bold text-3xl bg-gradient-to-r from-zeus-500 to-zeus-700 bg-clip-text text-transparent">
               ZEUS
             </span>
             <button

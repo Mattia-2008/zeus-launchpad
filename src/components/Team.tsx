@@ -43,7 +43,7 @@ const Team = () => {
       <div className="zeus-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <AnimatedText
-            text={<span className="inline-block text-zeus-600 font-medium mb-3">Our Team</span>}
+            text="Our Team"
             animation="fade-up"
           />
           <AnimatedText
