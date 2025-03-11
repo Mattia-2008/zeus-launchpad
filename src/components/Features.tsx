@@ -7,33 +7,33 @@ const Features = () => {
   const features = [
     {
       icon: <Cloud className="h-8 w-8 text-zeus-500" />,
-      title: "Cloud Integration",
+      title: "Monitoraggio Energetico",
       description:
-        "Seamlessly connect with leading cloud platforms for maximum flexibility and scalability.",
+        "Sensori avanzati che tracciano in tempo reale il consumo di energia, gas e acqua per un'analisi precisa.",
     },
     {
       icon: <Lock className="h-8 w-8 text-zeus-500" />,
-      title: "Advanced Security",
+      title: "Sicurezza Dati",
       description:
-        "Enterprise-grade security with end-to-end encryption and compliance with global standards.",
+        "Protezione completa dei dati con crittografia end-to-end e conformità agli standard globali.",
     },
     {
       icon: <Zap className="h-8 w-8 text-zeus-500" />,
-      title: "Lightning Performance",
+      title: "Ottimizzazione Consumi",
       description:
-        "Optimized code and architecture ensures blazing-fast performance even under heavy loads.",
+        "Algoritmi AI che analizzano i pattern di consumo e suggeriscono strategie di risparmio personalizzate.",
     },
     {
       icon: <BarChart3 className="h-8 w-8 text-zeus-500" />,
-      title: "Real-time Analytics",
+      title: "Analytics in Tempo Reale",
       description:
-        "Gain actionable insights with powerful analytics tools and customizable dashboards.",
+        "Dashboard intuitive per visualizzare i consumi e identificare opportunità di risparmio immediate.",
     },
     {
       icon: <Globe className="h-8 w-8 text-zeus-500" />,
-      title: "Global Reach",
+      title: "Sostenibilità Globale",
       description:
-        "Distributed infrastructure ensures low latency access from anywhere in the world.",
+        "Contribuisci alla riduzione dell'impatto ambientale attraverso un consumo energetico più efficiente.",
     },
   ];
 
@@ -47,72 +47,80 @@ const Features = () => {
 
       <div className="zeus-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <AnimatedText
-            text={<span className="inline-block text-zeus-600 font-medium mb-3">What We Offer</span>}
-            animation="fade-up"
-          />
-          <AnimatedText
-            text={<h2 className="zeus-title mb-6">Cutting-Edge <span className="text-gradient">Features</span></h2>}
-            animation="fade-up"
-            delay={100}
-          />
-          <AnimatedText
-            text={
-              <p className="zeus-paragraph">
-                Our platform is built with the latest technology to provide you with powerful,
-                scalable, and secure solutions for your business needs.
-              </p>
-            }
-            animation="fade-up"
-            delay={200}
-          />
+          <div className="inline-block text-zeus-600 font-medium mb-3">
+            <AnimatedText text="I Nostri Servizi" animation="fade-up" />
+          </div>
+          <h2 className="zeus-title mb-6">
+            <AnimatedText 
+              text="Tecnologie" 
+              animation="fade-up" 
+              delay={100} 
+            />
+            {" "}
+            <span className="text-gradient">
+              <AnimatedText 
+                text="All'Avanguardia" 
+                animation="fade-up" 
+                delay={150} 
+              />
+            </span>
+          </h2>
+          <p className="zeus-paragraph">
+            <AnimatedText
+              text="La nostra piattaforma utilizza l'intelligenza artificiale per analizzare i consumi energetici e proporre soluzioni personalizzate per ridurre gli sprechi e ottimizzare i costi."
+              animation="fade-up"
+              delay={200}
+            />
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <AnimatedText
-              key={index}
-              text={
-                <GlassCard className="h-full p-6 transition-all duration-300 hover:translate-y-[-8px]">
-                  <div className="mb-5 bg-zeus-100 w-16 h-16 rounded-xl flex items-center justify-center">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </GlassCard>
-              }
-              animation="fade-up"
-              delay={300 + index * 100}
-              className="h-full"
-            />
+            <div key={index} className="h-full">
+              <AnimatedText
+                text={feature.title}
+                animation="fade-up"
+                delay={300 + index * 100}
+                className="hidden"
+              />
+              <GlassCard className="h-full p-6 transition-all duration-300 hover:translate-y-[-8px]">
+                <div className="mb-5 bg-zeus-100 w-16 h-16 rounded-xl flex items-center justify-center">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </GlassCard>
+            </div>
           ))}
         </div>
 
         <div className="mt-20 max-w-4xl mx-auto">
-          <AnimatedText
-            text={
-              <GlassCard className="p-8 md:p-10 text-center" intensity="medium">
-                <h3 className="text-2xl md:text-3xl font-bold mb-6">
-                  Ready to transform your business?
-                </h3>
-                <p className="zeus-paragraph mb-8 max-w-2xl mx-auto">
-                  Join thousands of forward-thinking companies that are already using 
-                  Zeus to power their digital transformation.
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-                  {["Acme Inc.", "GlobalTech", "InnovateCo", "TechGiant"].map((company, index) => (
-                    <div key={index} className="flex flex-col items-center">
-                      <div className="w-12 h-12 bg-zeus-100 rounded-full mb-3 flex items-center justify-center">
-                        <span className="text-zeus-600 font-bold">{company.charAt(0)}</span>
-                      </div>
-                      <span className="text-sm font-medium">{company}</span>
+          <div>
+            <AnimatedText
+              text="Pronto per trasformare il tuo consumo energetico?"
+              animation="fade-in"
+              className="hidden"
+            />
+            <GlassCard className="p-8 md:p-10 text-center" intensity="medium">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                Pronto per trasformare il tuo consumo energetico?
+              </h3>
+              <p className="zeus-paragraph mb-8 max-w-2xl mx-auto">
+                Unisciti a centinaia di aziende lungimiranti che stanno già utilizzando
+                Zeus Energy per ottimizzare i propri consumi e ridurre l'impatto ambientale.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+                {["Industria Manifatturiera", "Catene Alberghiere", "Centri Commerciali", "Aziende Sanitarie"].map((company, index) => (
+                  <div key={index} className="flex flex-col items-center">
+                    <div className="w-12 h-12 bg-zeus-100 rounded-full mb-3 flex items-center justify-center">
+                      <span className="text-zeus-600 font-bold">{company.charAt(0)}</span>
                     </div>
-                  ))}
-                </div>
-              </GlassCard>
-            }
-            animation="fade-in"
-          />
+                    <span className="text-sm font-medium">{company}</span>
+                  </div>
+                ))}
+              </div>
+            </GlassCard>
+          </div>
         </div>
       </div>
     </section>

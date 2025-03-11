@@ -13,6 +13,9 @@ const Index = () => {
     // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = "smooth";
     
+    // Set page title
+    document.title = "Zeus Energy | Efficienza Energetica Intelligente";
+    
     // Scroll to top on page load
     window.scrollTo(0, 0);
     

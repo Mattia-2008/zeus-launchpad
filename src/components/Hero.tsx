@@ -29,28 +29,29 @@ const Hero = () => {
             <div className="max-w-xl mx-auto lg:mx-0">
               <div className="mb-4 inline-flex items-center rounded-full bg-zeus-100 px-3 py-1 text-sm font-medium text-zeus-800">
                 <Zap className="mr-1 h-3 w-3" />
-                <span>Innovating the future</span>
+                <span>Efficienza energetica intelligente</span>
               </div>
               
               <h1 className={`zeus-title mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 translate-y-8'}`}>
-                <span className="block">Empower Your Business with</span>
-                <span className="text-gradient font-extrabold">Zeus Technology</span>
+                <span className="block">Ottimizza i consumi con</span>
+                <span className="text-gradient font-extrabold">Zeus Energy</span>
               </h1>
               
-              <AnimatedText
-                text="We combine cutting-edge innovation with elegant design to create powerful solutions that transform the way businesses operate in the digital landscape."
-                className="zeus-paragraph mb-8 max-w-lg mx-auto lg:mx-0"
-                animation="fade-in"
-                delay={300}
-              />
+              <div className="zeus-paragraph mb-8 max-w-lg mx-auto lg:mx-0">
+                <AnimatedText
+                  text="Combiniamo sensori avanzati e intelligenza artificiale per analizzare i tuoi consumi energetici e fornirti soluzioni personalizzate per ridurre gli sprechi e ottimizzare i costi."
+                  animation="fade-in"
+                  delay={300}
+                />
+              </div>
               
               <div className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100' : 'opacity-0 translate-y-8'}`}>
                 <Button size="lg" className="rounded-full bg-zeus-600 hover:bg-zeus-700 text-white shadow-zeus-soft hover:shadow-zeus-glow">
-                  Get Started
+                  Inizia Ora
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full border-zeus-200 hover:bg-zeus-50">
-                  Learn More
+                  Scopri di più
                 </Button>
               </div>
             </div>
@@ -122,25 +123,23 @@ const Hero = () => {
         {/* Stats */}
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { value: "10M+", label: "Users" },
-            { value: "99.9%", label: "Uptime" },
-            { value: "24/7", label: "Support" },
-            { value: "100+", label: "Partners" },
+            { value: "30%", label: "Risparmio Medio" },
+            { value: "99.9%", label: "Affidabilità" },
+            { value: "24/7", label: "Monitoraggio" },
+            { value: "100+", label: "Installazioni" },
           ].map((stat, index) => (
-            <AnimatedText
-              key={index}
-              text={
-                <>
-                  <GlassCard className="h-full p-6 text-center" intensity="light">
-                    <p className="text-zeus-600 text-3xl font-bold mb-2">{stat.value}</p>
-                    <p className="text-muted-foreground">{stat.label}</p>
-                  </GlassCard>
-                </>
-              }
-              animation="fade-up"
-              delay={600 + index * 100}
-              className="h-full"
-            />
+            <div key={index} className="h-full">
+              <AnimatedText
+                text={stat.value}
+                animation="fade-up"
+                delay={600 + index * 100}
+                className="hidden"
+              />
+              <GlassCard className="h-full p-6 text-center" intensity="light">
+                <p className="text-zeus-600 text-3xl font-bold mb-2">{stat.value}</p>
+                <p className="text-muted-foreground">{stat.label}</p>
+              </GlassCard>
+            </div>
           ))}
         </div>
       </div>
