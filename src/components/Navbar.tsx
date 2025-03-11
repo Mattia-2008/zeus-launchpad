@@ -64,8 +64,8 @@ const Navbar = () => {
         >
           <div className="flex items-center">
             <a href="#hero" className="mr-4">
-              <span className="font-bold text-4xl md:text-5xl bg-gradient-to-r from-[#333333] to-[#555555] bg-clip-text text-transparent">
-                ZEUS ENERGY
+              <span className="font-bold text-3xl md:text-4xl bg-gradient-to-r from-zeus-500 to-zeus-700 bg-clip-text text-transparent">
+                ZEUS
               </span>
             </a>
           </div>
@@ -115,8 +115,8 @@ const Navbar = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-between items-center mb-8">
-            <span className="font-bold text-3xl md:text-4xl bg-gradient-to-r from-[#333333] to-[#555555] bg-clip-text text-transparent">
-              ZEUS ENERGY
+            <span className="font-bold text-3xl bg-gradient-to-r from-zeus-500 to-zeus-700 bg-clip-text text-transparent">
+              ZEUS
             </span>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
